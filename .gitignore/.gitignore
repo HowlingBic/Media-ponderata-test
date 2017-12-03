@@ -1,0 +1,30 @@
+#include "stdafx.h"
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+int main()
+{
+	int n = 0;
+	cout << "Scrivi il numero di voti" << endl;
+	cin >> n >>"\n";
+
+	int* voto = new int[n];
+	delete[]voto;
+	int* peso = new int[n];
+	delete[]peso;
+	for (int i{ 0 }; i < n; i++) {
+		cout << "Inserisci voto e peso " ;
+		cin >> voto[i] >> peso[i] >>"\n";
+	}
+
+	int s = 0, M = 0;
+	for (int i{ 0 }; i < n; i++) {
+		s = voto[i] * peso[i];
+	}
+	M = s / n;
+	cout << "La media ponderata è " ;
+	cout << M  ;
+
+	return 0;
+}
